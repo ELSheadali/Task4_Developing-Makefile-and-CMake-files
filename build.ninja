@@ -1,0 +1,3 @@
+include rules.ninja
+
+build all: phony calculator_app

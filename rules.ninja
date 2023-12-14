@@ -1,0 +1,10 @@
+rule cpp
+  command = g++ -c $in -o $out
+
+rule link
+  command = g++ $in -o $out
+
+build calculator.o: cpp calculator.cpp
+build calculator_lib.a: link calculator.o
+build calculator_app: link calculator_lib.a
+
